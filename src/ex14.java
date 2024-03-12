@@ -1,27 +1,27 @@
 import java.util.Scanner;
+
 public class ex14{
-
-    
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); 
+        Scanner scanner = new Scanner(System.in);
 
-        double [][] ponto1  = new double[2][2];;
-        double [][] ponto2 = new double[2][2];
+        System.out.println("Digite o primeiro termo da progressão aritmética:");
+        int primeiroTermo = scanner.nextInt();
 
-        for(int i = 0; i<2; i++){
-            System.out.println("Informe Vetor 1[0][" + i + "]: ");
-            ponto1[0][i] = scanner.nextInt();
-        }
+        System.out.println("Digite a ordem do termo desejado:");
+        int ordem = scanner.nextInt();
 
-        for(int i = 0; i<2; i++){
-            System.out.println("Informe Vetor [1][" + i + "]: ");
-            ponto2[1][i] = scanner.nextInt();
-        }
+        System.out.println("Digite a razão da progressão aritmética:");
+        int razao = scanner.nextInt();
 
-        double resultado = Math.sqrt(Math.pow((ponto2[1][0] - ponto1[0][0]), 2) + Math.pow((ponto2[1][1] - ponto1[0][1]), 2));
-        
-        System.out.println("Distância entre os pontos: " + resultado);
+        int resultado = calcularTermo(primeiroTermo, ordem, razao);
+        System.out.println("O " + ordem + "-ésimo termo da progressão aritmética é: " + resultado);
 
         scanner.close();
+    }
+
+    public static int calcularTermo(int primeiroTermo, int ordem, int razao) {
+
+        int termo = primeiroTermo + (ordem - 1) * razao;
+        return termo;
     }
 }
