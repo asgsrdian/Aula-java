@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class ex19 {
+public class ex16 {
     public static void main(String[] args) {
 
         Scanner scanner= new Scanner(System.in);
@@ -15,7 +15,7 @@ public class ex19 {
 
         double media= (nota1 + nota2 + nota3) / 3;
 
-        System.out.printf("--Media: %.2f" + media);
+        System.out.printf("--Media: %.2f", media);
 
         scanner.close();
         
