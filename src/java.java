@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.util.List;
 
-public class main {
+public class java {
 
     public static void main(String[] args) {
         // criando um objeto do tipo aluno
